@@ -44,7 +44,7 @@ function App() {
     {Object.keys(data).length > 0 &&
     <div className="col-md-12 text-center mt-5">
         <div className="shadow rounded weatherResultBox">
-           <img className="weatherIcon" src="/weather.png" alt="weatherlogo"/>
+           <img className="weatherIcon" src="%PUBLIC_URL%/weather.png" alt="weatherlogo"/>
            <h5 className="weatherCity">{data?.name}</h5>
            <h6 className="weatherTemp">{((data?.main?.temp)-273.15).toFixed(2)}<sup>o</sup>C</h6>
         </div>
