@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../public/weather.png";
+import logo from "./Assets/weather.png";
 function App() {
   const [data, setData] = useState({})
   const [inputCity, setInputCity] = useState("");
@@ -44,7 +44,7 @@ function App() {
     {Object.keys(data).length > 0 &&
     <div className="col-md-12 text-center mt-5">
         <div className="shadow rounded weatherResultBox">
-           <img className="weatherIcon" src="/weather.png" alt="weatherlogo"/>
+           <img className="weatherIcon" src={logo} alt="weatherlogo"/>
            <h5 className="weatherCity">{data?.name}</h5>
            <h6 className="weatherTemp">{((data?.main?.temp)-273.15).toFixed(2)}<sup>o</sup>C</h6>
         </div>
