@@ -6,16 +6,15 @@ This project is made using the open API: https://openweathermap.org/api
 
 ## Future SCOPE:
 
-> Can Add other weather information.
-> Interactive images based on the weather updates.
+* Can Add other weather information.
+* Interactive images based on the weather updates.
 
 ## Stack Used in this Project:
-
-> CRA (create-react-app)
-> OpenWeatherMap API
-> AXIOS API
-> BOOTSTRAP 
+* CRA (create-react-app)
+* OpenWeatherMap API
+* AXIOS API
+* BOOTSTRAP 
 
 ## Contribution:
 
-> Feel free to open an issue and contribute to the project.
+* Feel free to open an issue and contribute to the project.
