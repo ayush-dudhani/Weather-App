@@ -8,18 +8,20 @@ function App() {
   const [inputCity, setInputCity] = useState("");
   const getWeatherDetails = (cityName) =>{
     if(!cityName) return;
-    console.log(process.env);
     const apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+cityName +"&APPID="+process.env.REACT_APP_API;
     axios.get(apiURL).then((res)=>{
-      console.log("response", res.data);
-      setData(res.data);
-      }).catch((err) =>{
-        if(err.code === 400){
+      if (res.status === 200){
+        setData(res.data);
+      }
+      else {
+        alert("Unexpected Status Code: " + res.status);
+      }
+    }).catch((err) =>{
+        if(err.response.data.cod === '404'){
           setInputCity("");
           setData("");
-          alert("Sorry!, City Not Found in Database");
+          alert(err.response.data.message);
         }
-        console.log("error", err);
       })
     };
 
